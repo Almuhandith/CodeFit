@@ -7,7 +7,6 @@ const ergonomicsTips: string[] = [
 	"Adjust your chair and desk height to ensure proper ergonomics.",
 	"Use a keyboard and mouse that promote a comfortable hand position.",
 	"Position your monitor at eye level to reduce neck strain.",
-	// Add more tips as needed
 ];
 
 // Function to get a random tip from the array
@@ -19,7 +18,9 @@ function getRandomTip(): string {
 // Command to display a random ergonomics tip
 function showErgonomicsTip() {
 	const tip = getRandomTip();
-	vscode.window.showInformationMessage(tip);
+	setInterval(() => {
+		vscode.window.showInformationMessage(tip);
+	}, 1);
 }
 
 // Command to set a reminder
